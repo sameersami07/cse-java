@@ -1,0 +1,28 @@
+// Superclass
+class person {
+    String name;
+    int age;
+    void display() {
+        System.out.println("name:"+name);
+        System.out.println("age:"+age);
+
+    }
+}
+
+// Subclass
+class employee extends person {
+    int salary;
+    void display() {
+        System.out.println("salary:"+salary);
+    }
+ 
+}
+// Main class to run the program
+public class in {
+    public static void main(String[] args) {
+        person details = new person(); 
+        details.display(); 
+        employee d1=new employee();
+        d1.display();
+    }
+}
