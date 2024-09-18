@@ -1,0 +1,22 @@
+// Superclass
+class vehicle {
+    void start() {
+        System.out.println("vehicle started");
+    }
+}
+
+// Subclass
+class car extends vehicle {
+    void start() {
+        System.out.println("car started");
+    }
+}
+// Main class to run the program
+public class in {
+    public static void main(String[] args) {
+        car audi = new car(); 
+        audi.start(); 
+        vehicle honda=new vehicle();
+        honda.start();
+    }
+}
