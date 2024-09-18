@@ -1,0 +1,64 @@
+class Person {
+    String name;
+    int age;
+    Person(){
+
+    }
+    Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    void display() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+    }
+}
+
+// Subclass
+class Employee extends Person {
+    int salary;
+    int HRA;
+    Employee(String name, int age, int salary,int HRA) {
+        super(name, age); 
+        this.salary = salary;
+        this.HRA=HRA;
+    }
+
+   
+    void display() {
+        super.display(); 
+        System.out.println("Salary: " + salary);
+    }
+}
+class Manager extends Person {
+    int id;
+    String address;
+    Manager(String name,int age,int id,String address){
+        super(name,age);
+        this.id=id;
+        this.address=address;
+
+    }
+
+    void display(){
+        super.display();
+        System.out.println("id:"+id);
+        System.out.println("address:"+address);
+
+    }
+
+}
+// Main class to run the program
+public class in {
+    public static void main(String[] args) {
+        
+        Person details = new Person("jam", 18);
+        details.display(); 
+
+        Employee d1 = new Employee("sami", 19, 50000,2000);
+        d1.display(); 
+        Manager d2=new Manager("sameer",10,101,"bhimavaram");
+        d2.display();
+    }
+}
