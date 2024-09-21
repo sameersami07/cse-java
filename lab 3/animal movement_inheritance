@@ -1,0 +1,52 @@
+class file {
+    public static void main(String[] args) {
+        animal x=new animal("tiger",5);
+        x.display();
+        
+        bird y=new bird("parrot",2,"The bird is flying");
+        y.display();
+        
+        fish z=new fish("shark",5,"The fish is swimming");
+        z.display();
+    }
+}
+
+class animal{
+    String name;
+    int age;
+    
+    animal(String name,int age){
+        this.name=name;
+        this.age=age;
+    }    
+    void display(){
+        System.out.println("name:"+name);
+        System.out.println("age:"+age);
+    }
+    
+} 
+class bird extends animal{
+    String word;
+    bird(String name,int age,String word){
+        super(name,age);
+        this.word=word;
+    }
+    void display(){
+        super.display();
+        System.out.println("word: "+word);
+    }
+}
+class fish extends animal{
+    String word;
+    fish(String name,int age,String word){
+        super(name,age);
+        this.word=word;
+        
+    }
+    void display(){
+        super.display();
+        System.out.println("word: "+word);
+
+    } 
+}
+
