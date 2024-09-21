@@ -1,0 +1,56 @@
+class file {
+    public static void main(String[] args) {
+        shape x=new shape(2,2,3);
+        x.display();
+        
+        rectangle y=new rectangle(5,4);
+        y.display();
+
+        circle z=new circle(4);
+        z.display();
+    }
+}
+
+class shape{
+    int length;
+    int breadth;
+    int radius;
+    shape(int length,int breadth,int radius){
+        this.length=length;
+        this.breadth=breadth;
+        this.radius=radius;
+    }    
+    void display(){
+        System.out.println("length:"+length);
+        System.out.println("breadth:"+breadth);
+        System.out.println("radius:"+radius);
+    }
+    
+} 
+class rectangle extends shape{
+    int area;
+    rectangle(int length,int breadth){
+        super(length,breadth,0);
+        area=length*breadth;
+    }
+    void display(){
+        super.display();
+        System.out.println("area:"+area);
+    }
+}
+class circle extends shape{
+    int area;
+    circle(int radius){
+        super(0,0,radius);
+        area=(int)Math.PI*radius*radius;
+        
+    }
+    void display(){
+        super.display();
+        System.out.println("area:"+area);
+
+    } 
+}
+
+
+
