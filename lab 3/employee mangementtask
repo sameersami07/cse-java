@@ -1,0 +1,54 @@
+ public class EmployeeManagement {
+      public static void main(String[] args) {
+          
+          Manager manager = new Manager("sami", 800000);
+          Developer developer = new Developer("sameer", 600000);
+  
+          System.out.println(manager.work());        
+          System.out.println(manager.getSalary());    
+          System.out.println(developer.work());       
+          System.out.println(developer.getSalary()); 
+          System.out.println(developer.writeCode()); 
+      }
+  }
+
+class Employee {
+    protected String name;
+    protected double salary;
+
+     Employee(String name, double salary) {
+        this.name = name;
+        this.salary = salary;
+    }
+
+    String work() {
+        return name + " is working.";
+    }
+
+     String getSalary() {
+        return name + "'s salary is " + salary + ".";
+    }
+}
+
+
+class Manager extends Employee {
+     Manager(String name, double salary) {
+        super(name, salary);
+    }
+
+   
+     String work() {
+        return name + " is managing the team.";
+    }
+}
+
+
+class Developer extends Employee {
+    Developer(String name, double salary) {
+        super(name, salary);
+    }
+
+     String writeCode() {
+        return name + " is writing code.";
+    }
+}
